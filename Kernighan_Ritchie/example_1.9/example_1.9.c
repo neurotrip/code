@@ -1,11 +1,11 @@
 #include <stdio.h>
 #define MAXLINE 1000
 
-int getline(char line[], int maxline);
+int ngetline(char line[], int maxline);
 void copy (char to[], char from[]);
 
 
-main()
+int main()
 {
 	int len;
 	int max;
@@ -13,7 +13,7 @@ main()
 	char longest[MAXLINE];  
 
 	max = 0;
-	while ((len = getline(line, MAXLINE)) > 0)
+	while ((len = ngetline(line, MAXLINE)) > 0)
 		if (len > max) {
 			max = len;
 			copy(longest, line);
@@ -24,7 +24,7 @@ main()
 }
 
 
-int getline(char s[], int lim)
+int ngetline(char s[], int lim)
 {
 	int c, i;
 
