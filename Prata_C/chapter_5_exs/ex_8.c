@@ -9,11 +9,11 @@ int main(void)
 {
 	double t_far;
 	char ch;
-	while (ch != 'n') {
+       	while (ch != 'n'){	
 	printf ("Введите значение в Фаренгейтах\n");
-	scanf("%lf", &t_far);
+	scanf ("%lf", &t_far);
 	temp(t_far);
-	printf ("Хотите посчитать еще раз?(y/n)\n");
+	printf ("Хотите продолжить?\n");
 	scanf ("%c", &ch);
 	}
 	return 0;
