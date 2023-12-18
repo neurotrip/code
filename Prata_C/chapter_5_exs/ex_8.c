@@ -8,7 +8,7 @@ int temp(double far);
 int main(void)
 {
 	double t_far;
-	char ch;
+	char ch = 0;
        	while (ch != 'n'){	
 	printf ("Введите значение в Фаренгейтах\n");
 	scanf ("%lf", &t_far);
