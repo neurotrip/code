@@ -15,7 +15,7 @@ int main(void)
 	printf ("Введите не более 10 строк\n");
 	
 	while(fgets(*input, MAX, stdin) != NULL)
-//		*input++;	
+		*input++;	
 
 
 
@@ -31,7 +31,7 @@ int main(void)
 
 	
 	printOriginalList(string);
-	puts(*string);
+
 	return 0;	
 	
 }
