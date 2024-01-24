@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <string.h>
+
 #define LEN 20
 #define LN 3
 
@@ -9,7 +11,6 @@ struct month {
 	int numb;
 };
 
-int sum(struct month mesyac[], int n);
 
 int main(void)
 {
@@ -33,22 +34,34 @@ int main(void)
 //		printf("Месяц %s, абревеатура %s, количество дней %d, порядковы номер %d\n",
 //				months[i].name, months[i].abr, months[i].amount, months[i].numb);
 //	}
-	printf("Введите номер месяца\n");
+	printf("Введите название месяца\n");
 	
-	int n = 0;
-	scanf("%d", &n);
-	printf("Дней %d\n", sum(months, n));
+	char month_name[LEN];
+	gets(month_name);
+
+	for (int i = 0; i < 12; i++)
+	{
+		if (strcmp(month_name, months[i].name) == 0)
+		{
+			int summa = 0;
+			for (int j = 0; j < months[i].numb; j++) {
+				summa += months[j].amount;
+			}
+			printf("%d\n", summa);
+		}
+	}
+
 
 	return 0;
 }
 
-int sum(struct month mesyac[], int n)
-{
-	int summa = 0;
-	for (int i = 0; i < n; i++) {
-		summa += mesyac[i].amount;
-	}
+//int sum(struct month mesyac[], int n)
+//{
+//	int summa = 0;
+//	for (int i = 0; i < n; i++) {
+//		summa += mesyac[i].amount;
+//	}
 
-	return summa;
-}
+//	return summa;
+//}
 
