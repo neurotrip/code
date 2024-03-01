@@ -36,7 +36,7 @@ static void outputError(Boolean useErr, int err, Boolean flushStdout, const char
 				ename[err] : "?UNHNOWS?", strerror(err));
 	}
 	else 
-		snprintf(errText, BUF_SIZE, ":");	
+		snprintf(errText, BUF_SIZE, ":");
 	snprintf(buf, BUF_SIZE, "ERROR%s %s\n", errText, userMsg);
 	if (flushStdout)
 		fflush(stdout);

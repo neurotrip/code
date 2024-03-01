@@ -4,4 +4,4 @@
 char *userNameFromId(uid_t uid);
 uid_t userIdFromName(const char *name);
 char * groupNameFromId(gid_t gid);
-gid_t groupNameFromName(const char *name);
+gid_t groupIdFromName(const char *name);
