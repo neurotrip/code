@@ -10,7 +10,6 @@ int main()
 {
   pid_t pid;
   int rv = 0;
-  char *filename = "text.txt";
   int wstatus;
 
   switch(pid=fork()) {
@@ -22,16 +21,17 @@ int main()
           printf(" CHILD: Мой PID -- %d\n", getpid());
           printf(" CHILD: PID моего родителя -- %d\n", getppid());
           printf(" CHILD: Выход!\n");
-		  char *newargv[] = { "less" , filename, NULL };
-		  execv("less", newargv);
+		  char *newargv[] = { "less" , "test.txt", NULL };
+	  	  char *filename = "/usr/bin/less";	  
+		  execve(filename, newargv, NULL);
 		  
-          exit(rv);
+          _exit(EXIT_SUCCESS);
   default:
           printf("PARENT: Это процесс-родитель!\n");
           printf("PARENT: Мой PID -- %d\n", getpid());
           printf("PARENT: PID моего потомка %d\n",pid);
           printf("PARENT: Я жду, пока потомок не вызовет exit()...\n");
-		  waitpid(pid, &wstatus, WUNTRACED | WCONTINUED);
+		  wait(NULL);
           printf("PARENT: Код возврата потомка:%d\n", WEXITSTATUS(rv));
           printf("PARENT: Выход!\n");
   }
