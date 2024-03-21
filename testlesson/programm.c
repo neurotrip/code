@@ -70,7 +70,7 @@ int main()
 				if (pid_parrent == pid_less) 
 					break;
 			}
-			wait(NULL);
+//			wait(NULL);
 			if (close(out_fd) == -1) {
 				perror("close out_fd");
 				exit(EXIT_FAILURE);
