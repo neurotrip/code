@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include "ugid_functions.h"
 
-char *userNamefromID(uid_t uid)
+char *userNameFromId(uid_t uid)
 {
 	struct passwd *pwd;
 
