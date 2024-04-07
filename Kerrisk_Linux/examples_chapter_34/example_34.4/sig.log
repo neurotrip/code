@@ -1,0 +1,6 @@
+PID of parent process is: 		2739
+Foreground process group ID is: 2739
+PID=4389 PGID=4389
+PID=4390 PGID=2739
+PID=2739 PGID=2739
+PID=4391 PGID=2739
