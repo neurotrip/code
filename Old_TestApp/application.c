@@ -7,9 +7,9 @@
 
 int main(int argc, char *argv[])
 {
-	const char *pathname = "/home/code/testlesson/tmp/indata.txt";
+	const char *pathname = "/home/code/TestApp/tmp/indata.txt";
 	int fd;
-	if ((fd = open(pathname, O_CREAT| O_WRONLY | O_TRUNC, 0644)) == -1) {
+	if ((fd = open(pathname, O_CREAT| O_WRONLY | O_TRUNC, 0777)) == -1) {
 		perror("open");
 		exit(EXIT_FAILURE);
 	}
