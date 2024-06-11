@@ -7,7 +7,7 @@
 
 int main(int argc, char *argv[])
 {
-	const char *pathname = "/home/code/TestApp/tmp/indata.txt";
+	const char *pathname = "/home/alex/MyApp/TestApp_C++/tmp/indata.txt";
 	int fd;
 	if ((fd = open(pathname, O_CREAT| O_WRONLY | O_TRUNC, 0777)) == -1) {
 		perror("open");
